@@ -1,3 +1,5 @@
+uv.lock
+
 # OS X
 .DS_Store
 
@@ -95,3 +97,4 @@ dmypy.json
 # VS code configuration
 .vscode
 .history
+check_spark_env.sh

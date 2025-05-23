@@ -18,13 +18,11 @@ dependencies = ["mlflow==2.17.0",
                 "databricks-sdk==0.32.0",
                 "pydantic==2.9.2",
                 "loguru==0.7.3",
+                "pydantic_settings==2.9.1",
                 "marvelous@git+https://github.com/end-to-end-mlops-databricks-3/marvelous@0.1.0",
                 ]
 
 dynamic = ['version']
-
-[tool.uv.sources]
-marvelous = {git = "https://${GIT_TOKEN}@github.com/end-to-end-mlops-databricks-3/marvelous.git", rev="0.1.0"}
 
 [project.optional-dependencies]
 dev = ["databricks-connect==15.4.5",
@@ -34,9 +32,12 @@ dev = ["databricks-connect==15.4.5",
        "pytest>=8.3.4, <9",             # Added by MA
     ]
 test = [
+    "pre-commit>=4.1.0, <5",
     "delta-spark==3.3.0",
-    "pyspark==3.5.3",
+    "pyspark==3.5.5",
     "pytest>=8.3.5",
+    "pytest-cov >=6.1.0",
+    "pydantic-settings>=2.8.1"
 ]
 
 [build-system]
@@ -45,7 +46,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where =["src"]
-include = ["mlops_course*"]
+include = ["mlops_course*", "insurance*"]
 
 [tool.setuptools.dynamic]
 version = { file = "version.txt" }

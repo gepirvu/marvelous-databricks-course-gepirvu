@@ -1,0 +1,541 @@
+2025-05-13 18:05:30.099 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:05:30.107 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:07:50.514 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:07:50.517 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:16:56.077 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:16:56.080 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:31:32.157 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:31:32.161 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:36:48.140 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:36:48.147 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:39:45.018 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:39:45.021 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:40:36.160 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:40:36.164 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:47:04.451 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:47:04.455 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate: 0.08
+    n_estimators: 80
+    num_leaves: 30
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:47:08.886 | INFO     | __main__:<module>:9 - Data preprocessing: Elapsed time: 0.0195 seconds
+2025-05-13 18:48:11.932 | INFO     | __main__:<module>:13 - Model trainer and tuning: Elapsed time: 0.3154 seconds
+2025-05-13 18:54:19.201 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:54:19.204 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate:
+    - 0.08
+    - 0.09
+    - 0.1
+    - 0.11
+    - 0.12
+    n_estimators:
+    - 80
+    - 90
+    - 100
+    - 110
+    - 120
+    num_leaves:
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:54:24.628 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 18:54:24.632 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate:
+    - 0.08
+    - 0.09
+    - 0.1
+    - 0.11
+    - 0.12
+    n_estimators:
+    - 80
+    - 90
+    - 100
+    - 110
+    - 120
+    num_leaves:
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 18:54:28.491 | INFO     | __main__:<module>:10 - Data preprocessing: Elapsed time: 0.0173 seconds
+2025-05-13 18:57:29.334 | INFO     | __main__:<module>:13 - Model trainer and tuning: Elapsed time: 179.7672 seconds
+2025-05-13 18:58:26.082 | INFO     | __main__:<module>:10 - Data preprocessing: Elapsed time: 0.0202 seconds
+2025-05-13 18:58:26.082 | INFO     | __main__:<module>:12 - Training set shape: %s
+2025-05-13 18:58:26.082 | INFO     | __main__:<module>:13 - Test set shape: %s
+2025-05-13 18:59:00.032 | INFO     | __main__:<module>:1 - Training set shape: %s
+2025-05-13 18:59:00.034 | INFO     | __main__:<module>:2 - Test set shape: %s
+2025-05-13 19:00:35.258 | INFO     | __main__:<module>:2 - Saving data to catalog
+2025-05-13 19:04:52.870 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 19:04:52.877 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate:
+    - 0.08
+    - 0.09
+    - 0.1
+    - 0.11
+    - 0.12
+    n_estimators:
+    - 80
+    - 90
+    - 100
+    - 110
+    - 120
+    num_leaves:
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-13 19:04:58.010 | INFO     | __main__:<module>:10 - Data preprocessing: Elapsed time: 0.0190 seconds
+2025-05-13 19:05:01.785 | INFO     | __main__:<module>:10 - Data preprocessing: Elapsed time: 0.0201 seconds
+2025-05-13 19:08:03.698 | INFO     | __main__:<module>:13 - Model trainer and tuning: Elapsed time: 177.0997 seconds
+2025-05-13 19:08:17.874 | INFO     | __main__:<module>:1 - Training set shape: %s
+2025-05-13 19:08:17.874 | INFO     | __main__:<module>:2 - Test set shape: %s
+2025-05-13 19:08:24.546 | INFO     | __main__:<module>:2 - Saving data to catalog
+2025-05-13 19:16:53.216 | INFO     | __main__:<module>:2 - Saving data to catalog
+2025-05-13 19:17:04.950 | INFO     | __main__:<module>:10 - Data preprocessing: Elapsed time: 0.0174 seconds
+2025-05-13 19:17:17.634 | INFO     | __main__:<module>:2 - Saving data to catalog
+2025-05-13 19:17:42.699 | INFO     | __main__:<module>:10 - Saving data to catalog
+2025-05-13 19:18:51.705 | INFO     | __main__:<module>:10 - Saving data to catalog
+2025-05-13 19:19:31.534 | INFO     | __main__:<module>:13 - Data preprocessing: Elapsed time: 39.8433 seconds
+2025-05-13 19:20:26.829 | INFO     | __main__:<module>:2 - Enable change data feed
+2025-05-13 23:14:49.172 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-13 23:14:49.178 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate:
+    - 0.08
+    - 0.09
+    - 0.1
+    - 0.11
+    - 0.12
+    n_estimators:
+    - 80
+    - 90
+    - 100
+    - 110
+    - 120
+    num_leaves:
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-14 00:33:14.602 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-14 00:33:14.605 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate:
+    - 0.08
+    - 0.09
+    - 0.1
+    - 0.11
+    - 0.12
+    n_estimators:
+    - 80
+    - 90
+    - 100
+    - 110
+    - 120
+    num_leaves:
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-14 00:34:09.282 | INFO     | __main__:<module>:10 - Saving data to catalog
+2025-05-14 00:34:44.380 | INFO     | __main__:<module>:13 - Data preprocessing: Elapsed time: 35.1193 seconds
+2025-05-14 00:38:37.033 | INFO     | __main__:<module>:13 - Model trainer and tuning: Elapsed time: 192.5178 seconds
+2025-05-14 00:38:37.108 | INFO     | __main__:<module>:1 - Training set shape: %s
+2025-05-14 00:38:37.110 | INFO     | __main__:<module>:2 - Test set shape: %s
+2025-05-14 11:53:44.936 | INFO     | __main__:<module>:6 - Configuration loaded:
+2025-05-14 11:53:44.939 | INFO     | __main__:<module>:7 - !!python/object:insurance.config.ProjectConfig
+__dict__:
+  cat_features:
+  - sex
+  - smoker
+  - region
+  catalog_name: mlops_dev
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+  num_features:
+  - age
+  - bmi
+  - children
+  parameters:
+    learning_rate:
+    - 0.08
+    - 0.09
+    - 0.1
+    - 0.11
+    - 0.12
+    n_estimators:
+    - 80
+    - 90
+    - 100
+    - 110
+    - 120
+    num_leaves:
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+  schema_name: pirvugeo
+  target: charges
+__pydantic_extra__: null
+__pydantic_fields_set__: !!set
+  cat_features: null
+  catalog_name: null
+  data_path: null
+  num_features: null
+  parameters: null
+  schema_name: null
+  target: null
+__pydantic_private__: null
+
+2025-05-14 11:54:40.807 | INFO     | __main__:<module>:10 - Saving data to catalog
+2025-05-14 11:55:17.404 | INFO     | __main__:<module>:13 - Data preprocessing: Elapsed time: 36.6271 seconds
+2025-05-14 11:58:53.480 | INFO     | __main__:<module>:13 - Model trainer and tuning: Elapsed time: 183.3112 seconds
+2025-05-14 12:00:46.850 | INFO     | __main__:<module>:1 - Training set shape: %s
+2025-05-14 12:00:46.850 | INFO     | __main__:<module>:2 - Test set shape: %s

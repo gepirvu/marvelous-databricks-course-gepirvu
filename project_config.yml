@@ -1,0 +1,33 @@
+prd:
+  catalog_name: mlops_prd
+  schema_name: pirvugeo
+
+acc:
+  catalog_name: mlops_acc
+  schema_name: pirvugeo
+
+dev:
+  catalog_name: mlops_dev
+  schema_name: pirvugeo
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
+
+parameters:
+  learning_rate: [0.08, 0.09, 0.1, 0.11, 0.12]
+  n_estimators: [80, 90, 100, 110, 120]
+  num_leaves: [29, 30, 31, 32, 33]
+
+id_cols: []
+
+num_features:
+  - age
+  - bmi
+  - children
+
+date_features: []
+
+cat_features:
+  - sex
+  - smoker
+  - region
+
+target: charges
