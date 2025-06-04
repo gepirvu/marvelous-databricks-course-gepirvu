@@ -1,0 +1,30 @@
+artifact_path: pyfunc-insurance-model
+flavors:
+  python_function:
+    cloudpickle_version: 3.1.0
+    code: code
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pyfunc.model
+    python_model: python_model.pkl
+    python_version: 3.11.12
+    streamable: false
+mlflow_version: 2.17.0
+model_size_bytes: 39396
+model_uuid: 7784b4530f8e4457b13834aedf213d51
+run_id: 8e462daebd9043d7b4643afd0fbf2afd
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "age", "required": true}, {"type": "double",
+    "name": "bmi", "required": true}, {"type": "long", "name": "children", "required":
+    true}, {"type": "string", "name": "sex", "required": true}, {"type": "string",
+    "name": "smoker", "required": true}, {"type": "string", "name": "region", "required":
+    true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2025-05-23 15:34:38.444012'

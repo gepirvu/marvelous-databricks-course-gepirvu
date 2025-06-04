@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/504498185396613243/212cf72e93104e7fb539e605fe64fd26/artifacts
+end_time: 1748012031334
+entry_point_name: ''
+experiment_id: '504498185396613243'
+lifecycle_stage: active
+run_id: 212cf72e93104e7fb539e605fe64fd26
+run_name: receptive-toad-234
+run_uuid: 212cf72e93104e7fb539e605fe64fd26
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748012031286
+status: 3
+tags: []
+user_id: georg

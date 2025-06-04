@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/3c75e6971d9645829cf9c9767d22b355/artifacts
+end_time: 1748017023450
+entry_point_name: ''
+experiment_id: '600640267553287209'
+lifecycle_stage: active
+run_id: 3c75e6971d9645829cf9c9767d22b355
+run_name: zealous-kite-969
+run_uuid: 3c75e6971d9645829cf9c9767d22b355
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748017023035
+status: 3
+tags: []
+user_id: georg

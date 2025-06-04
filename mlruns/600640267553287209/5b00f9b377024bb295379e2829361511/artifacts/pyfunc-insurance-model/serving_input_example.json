@@ -1,0 +1,22 @@
+{
+  "dataframe_split": {
+    "columns": [
+      "age",
+      "bmi",
+      "children",
+      "sex",
+      "smoker",
+      "region"
+    ],
+    "data": [
+      [
+        62,
+        26.05,
+        3,
+        "male",
+        "yes",
+        "southeast"
+      ]
+    ]
+  }
+}

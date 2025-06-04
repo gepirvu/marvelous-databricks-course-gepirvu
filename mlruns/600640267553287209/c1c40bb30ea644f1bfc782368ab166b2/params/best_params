@@ -1,0 +1,1 @@
+{'regressor__learning_rate': 0.08, 'regressor__n_estimators': 80, 'regressor__num_leaves': 29}

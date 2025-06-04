@@ -31,10 +31,11 @@ with Timer() as preprocess_timer:
     processor = DataProcessor(df, config, spark)
     processor.preprocess()
 
-    train_set, test_set = processor.split_data()  # for UC save
+train_set, test_set = processor.split_data()  # for UC save
+
     # Save to catalog
-    logger.info("Saving data to catalog")
-    processor.save_to_catalog(train_set, test_set)
+logger.info("Saving data to catalog")
+processor.save_to_catalog(train_set, test_set)
 
 logger.info(f"Data preprocessing: {preprocess_timer}")
 

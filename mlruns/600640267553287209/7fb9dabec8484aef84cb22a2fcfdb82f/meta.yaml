@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/7fb9dabec8484aef84cb22a2fcfdb82f/artifacts
+end_time: 1748015198888
+entry_point_name: ''
+experiment_id: '600640267553287209'
+lifecycle_stage: active
+run_id: 7fb9dabec8484aef84cb22a2fcfdb82f
+run_name: orderly-swan-652
+run_uuid: 7fb9dabec8484aef84cb22a2fcfdb82f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748015198311
+status: 3
+tags: []
+user_id: georg

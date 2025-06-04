@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/c1c40bb30ea644f1bfc782368ab166b2/artifacts
+end_time: 1748014472000
+entry_point_name: ''
+experiment_id: '600640267553287209'
+lifecycle_stage: active
+run_id: c1c40bb30ea644f1bfc782368ab166b2
+run_name: gifted-hen-915
+run_uuid: c1c40bb30ea644f1bfc782368ab166b2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748014470573
+status: 3
+tags: []
+user_id: georg

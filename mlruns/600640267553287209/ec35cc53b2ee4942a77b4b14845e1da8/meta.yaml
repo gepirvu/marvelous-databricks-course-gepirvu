@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/ec35cc53b2ee4942a77b4b14845e1da8/artifacts
+end_time: 1748014485272
+entry_point_name: ''
+experiment_id: '600640267553287209'
+lifecycle_stage: active
+run_id: ec35cc53b2ee4942a77b4b14845e1da8
+run_name: awesome-hog-695
+run_uuid: ec35cc53b2ee4942a77b4b14845e1da8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748014484881
+status: 3
+tags: []
+user_id: georg

@@ -53,9 +53,10 @@ def test_column_transformations(sample_data: pd.DataFrame, config: ProjectConfig
     processor = DataProcessor(pandas_df=sample_data, config=config, spark=spark_session)
     processor.preprocess()
 
-    assert "region" not in processor.df.columns  # Should be one-hot encoded
-    assert processor.df["sex"].isin([0, 1]).all()
-    assert processor.df["smoker"].isin([0, 1]).all()
+    assert "region" in processor.df.columns  # check if region is in the DataFrame
+    assert processor.df["region"].dtype == "object" or processor.df["region"].dtype.name == "category"
+    assert processor.df["sex"].isin(["male", "female"]).all()
+    assert processor.df["smoker"].isin(["yes", "no"]).all()
 
 
 def test_missing_value_handling(sample_data: pd.DataFrame, config: ProjectConfig, spark_session: SparkSession) -> None:
@@ -92,7 +93,8 @@ def test_column_selection(sample_data: pd.DataFrame, config: ProjectConfig, spar
     assert config.target in processor.df.columns
     assert all(col in processor.df.columns for col in config.num_features)
     # after transformation, cat_features might be gone — check 1 dummy
-    assert any("northwest" in col or "southeast" in col for col in processor.df.columns)
+    assert "region" in processor.df.columns
+    assert processor.df["region"].dtype.name in ["object", "category"]
 
 
 def test_split_data_default_params(

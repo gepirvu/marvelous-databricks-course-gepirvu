@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/5b00f9b377024bb295379e2829361511/artifacts
+end_time: 1748014394475
+entry_point_name: ''
+experiment_id: '600640267553287209'
+lifecycle_stage: active
+run_id: 5b00f9b377024bb295379e2829361511
+run_name: unequaled-shark-358
+run_uuid: 5b00f9b377024bb295379e2829361511
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748014394061
+status: 3
+tags: []
+user_id: georg

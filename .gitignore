@@ -54,6 +54,7 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
+mlruns/
 
 # PyBuilder
 target/
@@ -98,3 +99,9 @@ dmypy.json
 .vscode
 .history
 check_spark_env.sh
+
+notebooks/logs/
+
+coverage.lcov
+.coverage
+src/insurance/data_preprocessing_old.py

@@ -23,16 +23,11 @@ class DataProcessor:
 
     def preprocess(self) -> None:
         """Preprocess the DataFrame stored in self.df."""
-        for col in self.config.cat_features:
-            if col in self.df.columns:
-                if self.df[col].nunique() == 2:
-                    self.df[col] = self.df[col].apply(lambda x: 0 if x in ["female", "no"] else 1)
-                else:
-                    dummies = pd.get_dummies(self.df[col], drop_first=True)
-                    self.df = pd.concat([self.df.drop(col, axis=1), dummies], axis=1)
-
         for col in self.config.num_features:
             self.df[col] = pd.to_numeric(self.df[col], errors="coerce")
+
+        for col in self.config.cat_features:
+            self.df[col] = self.df[col].astype("category")
 
         self.df[self.config.target] = pd.to_numeric(self.df[self.config.target], errors="coerce")
         self.df.dropna(subset=self.config.num_features, inplace=True)

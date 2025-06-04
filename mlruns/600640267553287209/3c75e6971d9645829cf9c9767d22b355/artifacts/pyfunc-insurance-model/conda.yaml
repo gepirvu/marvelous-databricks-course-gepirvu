@@ -1,0 +1,10 @@
+channels:
+- conda-forge
+dependencies:
+- python=3.11.12
+- pip
+- pip:
+  - mlflow==2.17.0
+  - pyspark==3.5.0
+  - ./code/insurance-0.0.1-py3-none-any.whl
+name: mlflow-env

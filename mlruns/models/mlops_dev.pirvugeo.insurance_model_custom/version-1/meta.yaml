@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1748014394519
+current_stage: None
+description: null
+last_updated_timestamp: 1748014394519
+name: mlops_dev.pirvugeo.insurance_model_custom
+run_id: 5b00f9b377024bb295379e2829361511
+run_link: null
+source: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/5b00f9b377024bb295379e2829361511/artifacts/pyfunc-insurance-model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/5b00f9b377024bb295379e2829361511/artifacts/pyfunc-insurance-model
+user_id: null
+version: 1

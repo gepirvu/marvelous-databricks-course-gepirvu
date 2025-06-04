@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/47a9df1b47b34dd58f5a81b0509758ad/artifacts
+end_time: 1748017029907
+entry_point_name: ''
+experiment_id: '600640267553287209'
+lifecycle_stage: active
+run_id: 47a9df1b47b34dd58f5a81b0509758ad
+run_name: brawny-hare-957
+run_uuid: 47a9df1b47b34dd58f5a81b0509758ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748017029516
+status: 3
+tags: []
+user_id: georg

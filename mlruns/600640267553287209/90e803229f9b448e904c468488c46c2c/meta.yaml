@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/georg/OneDrive/Desktop/Work/Databricks/marvmlops/marvelous-databricks-course-gepirvu/mlruns/600640267553287209/90e803229f9b448e904c468488c46c2c/artifacts
+end_time: 1748013495140
+entry_point_name: ''
+experiment_id: '600640267553287209'
+lifecycle_stage: active
+run_id: 90e803229f9b448e904c468488c46c2c
+run_name: polite-carp-839
+run_uuid: 90e803229f9b448e904c468488c46c2c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1748013493642
+status: 3
+tags: []
+user_id: georg

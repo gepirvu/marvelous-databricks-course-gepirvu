@@ -15,6 +15,7 @@ from tests.unit_tests.spark_config import spark_config
 @pytest.fixture(scope="session")
 def spark_session() -> Generator[SparkSession, None, None]:
     """Create a local Spark session for unit tests."""
+    print("🚀 Starting Spark fixture...")
     builder = (
         SparkSession.builder.master(spark_config.master)
         .appName(spark_config.app_name)
@@ -23,9 +24,12 @@ def spark_session() -> Generator[SparkSession, None, None]:
         .config("spark.sql.shuffle.partitions", spark_config.spark_sql_shuffle_partitions)
         .config("spark.driver.bindAddress", spark_config.spark_driver_bindAddress)
     )
+    print("🔧 Configured SparkSession builder")
 
     spark = builder.getOrCreate()
+    print("✅ Spark session created")
     yield spark
+    print("🧹 Tearing down Spark session")
     spark.stop()
 
 
