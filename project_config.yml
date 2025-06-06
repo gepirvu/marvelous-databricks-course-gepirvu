@@ -14,6 +14,7 @@ dev:
 
 experiment_name_basic: /Shared/insurance-basic
 experiment_name_custom: /Shared/insurance-custom
+experiment_name_fe: /Shared/insurance-fe
 
 parameters:
   learning_rate: [0.08, 0.09, 0.1, 0.11, 0.12]
