@@ -6,6 +6,7 @@ prd:
 acc:
   catalog_name: mlops_acc
   schema_name: pirvugeo
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
 
 dev:
   catalog_name: mlops_dev
