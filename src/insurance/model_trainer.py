@@ -33,7 +33,7 @@ class ModelTrainer:
                 - y_test (pd.Series): Testing target
 
         """
-        X = self.df.drop(columns=[self.config.target])
+        X = self.df.drop(columns=[self.config.target, "Id"])
         y = self.df[self.config.target]
         return train_test_split(X, y, test_size=0.2, random_state=42)
 

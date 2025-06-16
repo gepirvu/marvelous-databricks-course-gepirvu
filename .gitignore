@@ -105,3 +105,34 @@ notebooks/logs/
 coverage.lcov
 .coverage
 src/insurance/data_preprocessing_old.py
+
+**/*.whl
+
+.databricks
+
+test-reports
+.coverage
+# Ignore test artifacts and temporary files from the MLOps course
+test-mlops_course/
+
+# Databricks-specific files
+.dbx/
+databricks/
+workspace/
+
+# MLflow artifacts and experiment tracking
+mlruns/
+mlflow.db
+
+# Logs and debug
+logs/
+*.log
+debug.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class

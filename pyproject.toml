@@ -55,6 +55,9 @@ version = { file = "version.txt" }
 [tool.pytest.ini_options]
 testpaths = [ "tests" ]
 pythonpath = [ "." ]
+markers = [
+    "ci_exclude: Tests excluded from CI/CD pipeline"
+]
 
 # [lint.pydocstyle]
 # convention = "sphinx"
@@ -80,6 +83,9 @@ lint.ignore = [
     "D213", # multi-line-summary-second-line
     "E501", # line-too-long
     "C901", # too complex
+    "ERA001", # commented out code
+    "D100", # missing docstring
+    "ERA001" # commented out code
 ]
 
 [tool.ruff.format]

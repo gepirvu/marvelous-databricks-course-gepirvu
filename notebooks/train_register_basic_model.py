@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 from marvelous.common import is_databricks
 import os
 # COMMAND ----------
-# If you have DEFAULT profile and are logged in with DEFAULT profile,
+# If you have DEFAULT profile set and are logged in with DEFAULT profile,
 # skip these lines
 
 if not is_databricks():

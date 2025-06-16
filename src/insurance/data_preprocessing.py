@@ -5,6 +5,9 @@ Handles encoding, missing value imputation, dataset splitting,
 and catalog persistence using Spark.
 """
 
+import time
+
+import numpy as np
 import pandas as pd
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import current_timestamp, to_utc_timestamp
@@ -36,7 +39,7 @@ class DataProcessor:
         feature_columns = [col for col in self.df.columns if col != self.config.target]
         relevant_columns = feature_columns + [self.config.target]
         self.df = self.df[relevant_columns]
-
+        self.df["Id"] = self.df["Id"].astype("int64")
         print("\n[DataProcessor] Data after preprocessing:")
         print(self.df.head())
 
@@ -73,11 +76,11 @@ class DataProcessor:
             "update_timestamp_utc", to_utc_timestamp(current_timestamp(), "UTC")
         )
 
-        train_set_with_timestamp.write.mode("overwrite").saveAsTable(
+        train_set_with_timestamp.write.mode("append").saveAsTable(
             f"{self.config.catalog_name}.{self.config.schema_name}.train_set"
         )
 
-        test_set_with_timestamp.write.mode("overwrite").saveAsTable(
+        test_set_with_timestamp.write.mode("append").saveAsTable(
             f"{self.config.catalog_name}.{self.config.schema_name}.test_set"
         )
 
@@ -99,3 +102,70 @@ class DataProcessor:
             f"ALTER TABLE {self.config.catalog_name}.{self.config.schema_name}.test_set "
             "SET TBLPROPERTIES (delta.enableChangeDataFeed = true);"
         )
+
+
+def generate_synthetic_data_insurance(df: pd.DataFrame, drift: bool = False, num_rows: int = 500) -> pd.DataFrame:
+    """Generate synthetic insurance data based on statistical properties of existing dataset.
+
+    Args:
+        df (pd.DataFrame): Source insurance DataFrame (e.g. train_set)
+        drift (bool): Whether to inject distribution drift
+        num_rows (int): Number of synthetic rows to generate
+
+    Returns:
+        pd.DataFrame: Generated synthetic insurance data
+
+    """
+    synthetic_data = pd.DataFrame()
+
+    for column in df.columns:
+        if column in ["Id", "update_timestamp_utc"]:
+            continue
+
+        if pd.api.types.is_numeric_dtype(df[column]):
+            mean, std = df[column].mean(), df[column].std()
+            synthetic_data[column] = np.random.normal(mean, std, num_rows)
+
+            # Ensure positive for charges, bmi, age
+            if column in {"charges", "bmi", "age"}:
+                synthetic_data[column] = np.maximum(0, synthetic_data[column])
+
+        elif pd.api.types.is_categorical_dtype(df[column]) or df[column].dtype == object:
+            synthetic_data[column] = np.random.choice(
+                df[column].dropna().unique(), size=num_rows, p=df[column].value_counts(normalize=True)
+            )
+
+    # Inject drift if enabled
+    if drift:
+        if "charges" in synthetic_data.columns:
+            synthetic_data["charges"] *= 1.5  # Simulate cost increase
+        if "bmi" in synthetic_data.columns:
+            synthetic_data["bmi"] += 5  # Obesity trend
+        if "region" in synthetic_data.columns:
+            synthetic_data["region"] = np.random.choice(["southeast", "northeast"], size=num_rows)
+
+    # Assign unique IDs and timestamps
+    timestamp_base = int(time.time() * 1000)
+    synthetic_data["Id"] = [timestamp_base + i for i in range(num_rows)]
+    synthetic_data["update_timestamp_utc"] = pd.Timestamp.utcnow()
+
+    # Cast types to match schema
+    synthetic_data = synthetic_data.astype(
+        {
+            "Id": "int64",
+            "age": "int64",
+            "children": "int64",
+            "bmi": "float64",
+            "charges": "float64",
+            "sex": "object",
+            "smoker": "object",
+            "region": "object",
+        }
+    )
+
+    return synthetic_data
+
+
+def generate_test_data_insurance(df: pd.DataFrame, drift: bool = False, num_rows: int = 100) -> pd.DataFrame:
+    """Generate test insurance data based on original schema and optional drift."""
+    return generate_synthetic_data_insurance(df, drift=drift, num_rows=num_rows)

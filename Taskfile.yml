@@ -32,6 +32,52 @@ tasks:
     cmds:
       - uv run pre-commit run --all-files
 
+  run-unit-tests:
+    cmds:
+      - export PYTEST_EXIT_STATUS=0
+      - rm -rf test-reports || true
+      - uv run pytest -m "not ci_exclude" ./tests --cov "{{.TASKFILE_DIR}}/src/{{.PACKAGE_IMPORT_NAME}}" --cov-report html --cov-report term  --cov-report xml --junit-xml "{{.TASKFILE_DIR}}/test-reports/report.xml" --cov-fail-under 60 || ((PYTEST_EXIT_STATUS+=$?))
+      - mv coverage.xml "{{.TASKFILE_DIR}}/test-reports/" || true
+      - mv htmlcov "{{.TASKFILE_DIR}}/test-reports/" && rm -rf htmlcov
+      - mv .coverage "{{.TASKFILE_DIR}}/test-reports/" || true
+      - exit $PYTEST_EXIT_STATUS
+    silent: true
+    desc: "Run tests with coverage reports and move results to test-reports directory"
+
+  clean:
+    desc: "Clean up build artifacts, caches, and temporary files"
+    cmds:
+      - rm -rf dist build coverage.xml test-reports tests/mlruns test-house_price
+      - find . -type d \( -name "*cache*" -o -name "*.dist-info" -o -name "*.egg-info" -o -name "*htmlcov" \) -not -path "*env/*" -exec rm -r {} + || true
+      - find . -type f -name "*.pyc" -not -path "*env/*" -exec rm {} +
+    silent: true
+
+  build:
+    desc: Build the project
+    cmds:
+      - uv build
+
+  serve-coverage-report:
+    desc: "Serve the coverage report via a local HTTP server on port 8000"
+    cmd: |
+      echo "Coverage report available at: http://localhost:8000/"
+      python -m http.server --directory "{{.TASKFILE_DIR}}/test-reports/htmlcov/" 8000
+    silent: false
+
+  serve-latest-registered-model-locally:
+    desc: Download the latest registered model from MLflow to the folder namely test-insurance_price.
+    cmds:
+      # Ensure the 'test-house_price' directory is clean and ready
+      - rm -rf "test-{{.PACKAGE_IMPORT_NAME}}" && mkdir -p "test-{{.PACKAGE_IMPORT_NAME}}/my_model"
+      # Navigate to the directory where mlruns exists and download the model into 'test-house_price'
+      # Reminder note -> "models:/{catalog_name}.{schema_name}.model_name" is the full model name. Please update it accordingly.
+      - cd tests && uv run mlflow artifacts download --artifact-uri "models:/mlops_dev.pirvugeo.insurance_model_custom@latest-model" --dst-path "../test-{{.PACKAGE_IMPORT_NAME}}/my_model"
+      - cd ..
+      # Serve model with mlflow locally
+      - cd "test-{{.PACKAGE_IMPORT_NAME}}" && uv run mlflow models serve -m my_model --port 5088 --no-conda
+      # Execute the following line in a separate terminal in the project folder to run the tests for local deployment validations
+      # uv run pytest -v -s tests/integration_tests/test_mlflow_serve.py
+
   help:
     desc: Print all tasks defined in the Taskfile
     cmd: task -l

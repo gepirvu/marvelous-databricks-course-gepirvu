@@ -6,6 +6,7 @@ prd:
 acc:
   catalog_name: mlops_acc
   schema_name: pirvugeo
+  data_path: dbfs:/Volumes/mlops_dev/pirvugeo/data/insurance.csv
 
 dev:
   catalog_name: mlops_dev
@@ -14,6 +15,7 @@ dev:
 
 experiment_name_basic: /Shared/insurance-basic
 experiment_name_custom: /Shared/insurance-custom
+experiment_name_fe: /Shared/insurance-fe
 
 parameters:
   learning_rate: [0.08, 0.09, 0.1, 0.11, 0.12]

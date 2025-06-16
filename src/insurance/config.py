@@ -24,9 +24,10 @@ class ProjectConfig(BaseModel):
     catalog_name: str
     schema_name: str
     parameters: dict[str, Any]
-    data_path: str
+    data_path: str | None = None
     experiment_name_basic: str | None
     experiment_name_custom: str | None
+    experiment_name_fe: str | None
 
     @classmethod
     def from_yaml(cls, config_path: str, env: str = "dev") -> "ProjectConfig":
@@ -45,10 +46,10 @@ class ProjectConfig(BaseModel):
 
         with open(config_path) as f:
             config_dict = yaml.safe_load(f)
-            config_dict["catalog_name"] = config_dict[env]["catalog_name"]
-            config_dict["schema_name"] = config_dict[env]["schema_name"]
-            config_dict["data_path"] = config_dict[env]["data_path"]
-            return cls(**config_dict)
+
+        env_config = config_dict.get(env, {})
+        merged_config = {**{k: v for k, v in config_dict.items() if k not in ["dev", "acc", "prd"]}, **env_config}
+        return cls(**merged_config)
 
 
 class Tags(BaseModel):
