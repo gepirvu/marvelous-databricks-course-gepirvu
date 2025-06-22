@@ -52,6 +52,7 @@ print(model)
 
 # COMMAND ----------
 # Retrieve dataset for the current run
+
 basic_model.retrieve_current_run_dataset()
 
 # COMMAND ----------

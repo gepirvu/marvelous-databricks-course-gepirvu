@@ -20,7 +20,7 @@ dbutils = DBUtils(spark)
 tags_dict = {"git_sha": args.git_sha, "branch": args.branch, "job_run_id": args.job_run_id}
 tags = Tags(**tags_dict)
 
-# Initialize model
+# Initialize fe model
 fe_model = FeatureLookUpModel(config=config, tags=tags, spark=spark)
 logger.info("Model initialized.")
 
